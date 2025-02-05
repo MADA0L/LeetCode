@@ -1,6 +1,6 @@
 class Solution {
     public long countCompleteDayPairs(int[] hours) {
-        int ans = 0;
+        long ans = 0;
         if (hours.length == 0 ){
             return 0;
         }
