@@ -21,6 +21,12 @@ class Solution {
     }
 
     public int gcd(int a, int b){
+        while (a >= 10 ){
+            a = a / 10;
+        }
+        while (b >= 10){
+            b = b % 10;
+        }
         while (b != 0 ){
             int tmp = b;
             b = a % b;
