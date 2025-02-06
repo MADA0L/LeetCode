@@ -12,7 +12,7 @@ class Solution {
                 }
             }
             if (hmap.containsKey(nums[i])){
-                hmap.put(nums[i],hmap.get(nums[i]+1));
+                hmap.put(nums[i],hmap.get(nums[i])+1);
             } else {
                 hmap.put(nums[i], 1);
             }
