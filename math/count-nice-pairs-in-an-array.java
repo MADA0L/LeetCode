@@ -26,6 +26,7 @@ class Solution {
             revNum = revNum + (int) (numList.get(i) * Math.pow(10, size-1));
             size--;
         }
-        return revNum;
+        
+        return revNum % (Math.pow(10,9)+7);
     }
 }
