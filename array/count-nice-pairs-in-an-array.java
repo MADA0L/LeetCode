@@ -27,6 +27,6 @@ class Solution {
             size--;
         }
         
-        return revNum % (Math.pow(10,9)+7);
+        return revNum % (int)(Math.pow(10,9)+7);
     }
 }
