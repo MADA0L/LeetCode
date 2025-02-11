@@ -10,7 +10,7 @@ class Solution {
             map.put(target,map.getOrDefault(target, 0) + 1);
         }
 
-        return (int) (ans % Math.pow(10,9)+7);
+        return (int) (ans % (Math.pow(10,9)+7));
     }
 
     public static int rev(int num) {
