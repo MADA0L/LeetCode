@@ -1,6 +1,6 @@
 class Solution {
     public int countNicePairs(int[] nums) {
-        int ans = 0;
+        long ans = 0;
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i< nums.length ; i++){
             int target = nums[i]-rev(nums[i]);
@@ -10,7 +10,7 @@ class Solution {
             map.put(target,map.getOrDefault(target, 0) + 1);
         }
 
-        return ans;
+        return (int) (ans % Math.pow(10,9)+7);
     }
 
     public static int rev(int num) {
