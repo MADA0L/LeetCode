@@ -17,6 +17,7 @@ class Solution {
                 if (j > i+1 && nums[j] == nums[j-1]){
                     continue;
                 }
+
                 int l = j + 1;
                 int r = len -1;
                 while (l < r){
@@ -25,10 +26,10 @@ class Solution {
                         ans.add(Arrays.asList(nums[i], nums[j], nums[l], nums[r]));
                         l++;
                         r--;
-                        while (l < r && nums[l] == nums[l+1]){
+                        while (l < r && nums[l] == nums[l-1]){
                             l++;
                         }
-                        while (l < r && nums[r] == nums[r-1]){
+                        while (l < r && nums[r] == nums[r+1]){
                             r--;
                         }
                     }else if(sum < target){
