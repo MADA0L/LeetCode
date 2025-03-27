@@ -21,7 +21,7 @@ class Solution {
                 int l = j + 1;
                 int r = len -1;
                 while (l < r){
-                    long sum = nums[i] + nums[j] + nums[l] + nums[r];
+                    long sum = (long)nums[i] + nums[j] + nums[l] + nums[r];
                     if (sum == target){
                         ans.add(Arrays.asList(nums[i], nums[j], nums[l], nums[r]));
                         l++;
