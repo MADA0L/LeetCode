@@ -6,13 +6,12 @@ class Solution {
 
         for (int right = 0; right < nums.length; right++){
             product *= nums[right];
-            if (product >= k){
+            while (product >= k && left <= right){
                 product /= nums[left];
                 left += 1;
-                ans += right - left + 1;
-            } else {
-                ans += right - left + 1;
             }
+            ans += right - left + 1;
+
         }
     return ans;
     }
