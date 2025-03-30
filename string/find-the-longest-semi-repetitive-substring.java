@@ -1,5 +1,8 @@
 class Solution {
     public int longestSemiRepetitiveSubstring(String s) {
+        if (s.length() < 2){
+            return  s.length();
+        }
         int left = 0;
         int flag = 0;
         int ans = 0;
