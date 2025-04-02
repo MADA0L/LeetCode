@@ -13,7 +13,7 @@ class Solution {
         }
 
         for(int i = 0; i + k <= arrayList.size(); i++){
-            ans += nums[i] + 1;
+            ans += arrayList.get(i) + 1;
         }
         if (ans == 0){
             return 0;
