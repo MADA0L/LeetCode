@@ -1,23 +1,24 @@
 class Solution {
     public long countSubarrays(int[] nums, int k) {
-        
-        int ans = 0;
+        List<Integer> arrayList = new ArrayList<>();
         int max = 0;
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int right = 0; right < nums.length; right++){
-            int left = 0;
-            int currNum = nums[right];
-            int currCount = map.getOrDefault(nums[right], 0) + 1;
-            map.put(currNum,currCount);
-            max = Math.max(max, currCount);
-            while(max >= k ){
-                if (nums[left] == currNum){
-                    max--;
-                }
-                left++;
-            }
-            ans += left;
+        int ans = 0;
+        for (int i = 0; i< nums.length; i++){
+            max = Math.max(nums[i], max);
         }
-        return ans;
+        for (int i = 0; i< nums.length; i++){
+            if (nums[i] == max){
+                arrayList.add(i);
+            }
+        }
+
+        for(int i = 0; i + k <= arrayList.size(); i++){
+            ans += nums[i] + 1;
+        }
+        if (ans == 0){
+            return 0;
+        }
+        ans += nums.length - arrayList.get(arrayList.size() -1 ) - 1 ;
+        return  ans;
     }
 }
